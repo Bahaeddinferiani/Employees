@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+   <record id="action_employees1" model="ir.actions.act_window">
+      <field name="name">Employees</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">ics.employee</field>
+      <field name="view_mode">graph</field>
+      <field name="domain">[]</field>
+      <field name="context">{}</field>
+      <field name="help" type="html">
+         <p class="o_view_nocontent_smiling_face">create a new employee</p>
+      </field>
+   </record>
+   <menuitem id="ics_employees1" name="Analyse employées" parent="ics_root" action="action_employees1" />
+</odoo>

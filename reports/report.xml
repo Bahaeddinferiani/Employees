@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <report
+     id="id_employee_card"
+    string="Carte employé"
+    model="ics.employee"
+    report_type="qweb-pdf"
+    name="gestion_ics.report_employee"
+    file="gestion_ics.report_employee"
+    />
+
+</odoo>

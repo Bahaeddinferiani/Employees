@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="employee_tree_view" model="ir.ui.view">
+        <field name="name">ics.employee.tree</field>
+        <field name="model">ics.employee</field>
+        <field name="arch" type="xml">
+            <tree string="employees">
+                    <field name="name"/>
+                    <field name="job"/>
+                    <field name="tel"/>
+
+            </tree>
+
+       </field>
+
+    </record>
+
+
+    <record id="employee_form_view" model="ir.ui.view">
+        <field name="name">ics.employee.form</field>
+        <field name="model">ics.employee</field>
+        <field name="arch" type="xml">
+            <form string="EMPS">
+                <sheet>
+                    <field name="photo" widget="image" class="oe_avatar"/>
+                    <div class="oe_title">
+                        <h1>
+                            <div style="color:navy;">Nom et Prenom:</div>
+                            <field name="name" />
+
+                        </h1>
+                    </div>
+                        <group>
+                                <field name="job"/>
+                                <field name="email"/>
+                                <field name="Kms_to_work"/>
+                                <field name="department"/>
+                                <field name="date_of_birth"/>
+                                <field name="salary"/>
+                                <field name="tel"/>
+                                <field name="martial_status"/>
+                        </group>
+
+                </sheet>
+
+
+            </form>
+        </field>
+    </record>
+    <record id="action_employees" model="ir.actions.act_window">
+        <field name="name">Employees</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ics.employee</field>
+        <field name="view_mode">form,tree</field>
+        <field name="domain">[]</field>
+        <field name="context">{}</field>
+
+        <field name="help" type="html" >
+                <p class="o_view_nocontent_smiling_face">
+                    create a new employee
+                </p>
+        </field>
+    </record>
+<menuitem id="ics_root" name="Ics" sequence="0"/>
+<menuitem id="ics_employees" name="Employees" parent="ics_root" action="action_employees" />
+
+</odoo>
